@@ -43,13 +43,13 @@ npm init -y
 sed -i 's/"type": "commonjs"/"type": "module"/' package.json
 
 # Install backend dependencies
-npm install express cors dotenv mongoose multer pdf-parse
+npm install express cors dotenv
 
 # Create backend files
-touch src/server.js .env package.json .eslintrc.js
+touch index.js .env package.json .eslintrc.js
 
 # Create server.js with basic Express setup
-cat <<EOL > src/server.js
+cat <<EOL > index.js
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
